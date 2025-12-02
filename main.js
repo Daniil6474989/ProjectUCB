@@ -87,10 +87,10 @@ document.addEventListener('DOMContentLoaded', function () {
         loop: true,
         grabCursor: true,
         speed: 600,
-      // Автопрокрутка (опционально):
-      // autoplay: {
-      //   delay: 5000,
-      //   disableOnInteraction: false
-      // }
+      // Автопрокрутка (если будет нужна):
+      //   autoplay: {
+      //     delay: 5000,
+      //     disableOnInteraction: false
+      //  }
     });
 });
