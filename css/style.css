@@ -307,6 +307,9 @@ header {
 }
 
 /* Услуги */
+.advantages-section{
+ display: none;
+}
 
 .services-section {
     background-color: white;
@@ -584,8 +587,6 @@ header {
     background-color: white;
     color: var(--dark);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
     width: 433px;
@@ -802,6 +803,10 @@ footer {
         100% 100%,
         0% 100%
     );
+}
+
+.footer-sohial-mob{
+    display: none;
 }
 
 .footer-sohial-menu {
@@ -1066,9 +1071,13 @@ footer {
         justify-content: center;
         display: flex;
     }
+        .advantages-section{
+        display: block;
+    }
 }
 
 @media(max-width:1000px){
+
     .subtract-main{
         top: 42vw;
     }
@@ -1086,10 +1095,7 @@ footer {
     .about-text-proccents{
         width: 400px;
     }
-    .advantages-grid{
-        padding-left: 0;
-        display: none;
-    }
+
     .footer-sohial-menu{
         gap: 100px;
     }
@@ -1226,8 +1232,9 @@ footer {
         align-items: center;
         padding: 15px 20px;
         color: white;
-        position: relative;
-        bottom: 19%;
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 
     /* Бургер-иконка */
@@ -1328,9 +1335,12 @@ footer {
         padding-right: 150px;
     }
     .hero-content-form{
-        top: 600px;
+        top: 500px;
     }
+
 }
+
+
 @media(max-width:999px){
     .service-big-blue{
         display: none;
@@ -1349,6 +1359,9 @@ footer {
 @media(max-width:768px){
     .equipment-grid{
         justify-content: unset;
+    }
+    .hero-content-form{
+        right: 0;
     }
     .service-text{
         width: 52vw;
@@ -1388,7 +1401,7 @@ footer {
         top: 71vw;
     }
     .subtract-second{
-        top: 20vw;
+        top: 26vw;
         padding-right: 200px;
     }
     .subtract-main svg{
@@ -1396,7 +1409,10 @@ footer {
         padding-right: 12vw;
     }
     .subtract-second svg{
-        width: 900px;
+        width: 1100px;
+        position: absolute;
+        left: 0;
+        padding-right: 0;
     }
     .faq-section-title{
         font-size: 50px;
@@ -1406,14 +1422,103 @@ footer {
     }
     .footer{
         display: grid;
-        justify-content: center;
         clip-path:none;
     }
+
+    #container-footer{
+        max-width: 100%;
+        padding: 0;
+    }
+    .footer-links{
+        display: none;
+    }
+    .footer-col{
+        gap: 50px;
+    }
     .footer-sohial{
+        clip-path: none;
+        width: 100%;
+    }
+    .footer-sohial{
+        display: none;
+    }
+    .footer-sohial-mob{
+        padding: 20px;
+        display: grid;
+        background: linear-gradient(135deg, #0000BF, var(--blue-light));
+    }
+    .footer-sohial-menu{
+        display: grid;
+        gap:40px;
+    }
+    .footer-sohial-services{
+        column-count: 2;
+    }
+    .footer-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         
+    }
+    .footer-links-mob{
+        display: grid;
+        gap: 20px;
+    }
+    .footer-links-mob a{
+        color: white;
+    }
+    .horizontal-line-footer {
+        width: 90vw;
+        margin-top: 20px;
+    }  
+    .stick-footer{
+        margin-left: 30vw;
+    }
+    .about-text{
+        width: 70vw;
+    }
+    .hero-content h1{
+        font-size: 30px;
+    }
+    .hero-form{
+        display: grid;
+    }
+    .hero-form input{
+        padding: 10px;
+        width: 370px;
+    }
+    .section{
+        padding: 20px;
+    }
+    .about-section{
+        padding: 20px;
+    }
+    .advantage-card{
+        width: 390px;
+    }
+    .advantage-card-item{
+        left: 39%;
+    }
+    .faq-section{
+        padding: 20px;
+    }
+    .swiper-slide{
+        max-width: 300px;
+    }
+    .services-slide-content{
+        width: 400px;
+    }
+    #container-services{
+        padding: 0;
+    }
+    #swip-centr{
+        justify-content: center;
+        width: 1440px;
     }
 }
 
-
+@media(max-width:480px){
+    
+}
 
 
