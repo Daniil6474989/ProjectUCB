@@ -1857,13 +1857,13 @@ vertical-align: middle;
 
 @media(max-width:376px){
     .about-text-proccents{
-        width: 310px;
+        width: 280px;
     }
     .section-detail-img{
         width: 320px;
     }
     .advantage-card{
-        width: 300px;
+        width: 270px;
     }
     .advantage-card h3{
         font-size: 12px;
@@ -1887,16 +1887,35 @@ vertical-align: middle;
         gap: 35px;
     }
     .equipment-card-img{
-        width: 330px;
+        width: 300px;
     }
     .test {
-        width: 340px;
+        width: 300px;
+        height: 163px;
     }
     .equipment-card-content{
-        bottom: 20px;
+        bottom: 25px;
     }
     .advantage-card-bg{
-        right: 28%;
+        right: 25%;
     }
+    .advantage-card-text{
+        text-align: center;
+        padding-top: 70px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+    }
+    .equipment-card-content-text{
+        margin-top: 20px;
+    }
+    .equipment-card p{
+        font-size: 12px;
+    }
+    .equipment-card h3{
+        font-size: 20px;
+    }
+
 }
 
