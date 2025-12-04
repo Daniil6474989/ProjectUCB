@@ -1855,7 +1855,7 @@ vertical-align: middle;
 
 }
 
-@media(max-width:376px){
+@media(max-width:400px){
     .about-text-proccents{
         width: 280px;
     }
