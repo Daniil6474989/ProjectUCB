@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Адаптивность
       breakpoints: {
-        400: {
+        320: {
           slidesPerView: 1,
           spaceBetween: 15
         },
