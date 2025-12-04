@@ -1860,7 +1860,7 @@ vertical-align: middle;
         width: 280px;
     }
     .section-detail-img{
-        width: 320px;
+        width: 340px;
     }
     .advantage-card{
         width: 270px;
@@ -1872,16 +1872,16 @@ vertical-align: middle;
         left: 36%;
     }
     .service-detail{
-        width: 320px;
+        width: 340px;
         height: 340px;
         bottom: 18px;
     }
     .service-subtract-second-pic{
-        bottom: 62%;
+        bottom: 419px;
     }
     .service-big-blue{
         height: 20%;
-        width: 42%;
+        width: 155px;
     }
     #swip-centr{
         gap: 35px;
@@ -1891,7 +1891,7 @@ vertical-align: middle;
     }
     .test {
         width: 300px;
-        height: 163px;
+        height: 148px;
     }
     .equipment-card-content{
         bottom: 25px;
