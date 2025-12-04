@@ -1860,25 +1860,43 @@ vertical-align: middle;
         width: 310px;
     }
     .section-detail-img{
-        width: 330px;
+        width: 320px;
+    }
+    .advantage-card{
+        width: 300px;
+    }
+    .advantage-card h3{
+        font-size: 12px;
     }
     .advantage-card-item{
-        left: 33%;
+        left: 36%;
     }
     .service-detail{
-        width: 330px;
+        width: 320px;
         height: 340px;
-        bottom: 13px;
+        bottom: 18px;
     }
     .service-subtract-second-pic{
         bottom: 62%;
     }
     .service-big-blue{
         height: 20%;
-        width: 44%;
+        width: 42%;
     }
     #swip-centr{
         gap: 35px;
+    }
+    .equipment-card-img{
+        width: 330px;
+    }
+    .test {
+        width: 340px;
+    }
+    .equipment-card-content{
+        bottom: 20px;
+    }
+    .advantage-card-bg{
+        right: 28%;
     }
 }
 
