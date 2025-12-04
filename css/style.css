@@ -1666,7 +1666,7 @@ vertical-align: middle;
         padding-right: 250px;
     }
     .faq-section-title{
-        font-size: 50px;
+        font-size: 40px;
     }
     footer{
         background-color: #E6E8F4;
@@ -1781,6 +1781,12 @@ vertical-align: middle;
         clip-path: polygon(95% 0%, 0% 0%, 0% 100%, 100% 100%, 85% 100%);
         background: linear-gradient(110deg, rgba(230, 232, 244, 0.3), rgba(0, 0, 191, 0.8));
     }
+    .equipment-card-img{
+        width: 460px;
+    }
+    .test{
+        width: 500px;
+    }
 }
 
 @media(max-width:480px){
@@ -1842,6 +1848,9 @@ vertical-align: middle;
         background: linear-gradient(110deg, rgba(230, 232, 244, 0.3), rgba(0, 0, 191, 0.8));
     }
     .section-title-about{
+        font-size: 40px;
+    }
+    .faq-section-title{
         font-size: 40px;
     }
 
