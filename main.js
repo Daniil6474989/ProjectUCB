@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-// Услуги
+// Услуги моб
 document.addEventListener('DOMContentLoaded', function () {
     new Swiper('.services-swiper', {
         slidesPerView: 1,
@@ -92,5 +92,76 @@ document.addEventListener('DOMContentLoaded', function () {
       //     delay: 5000,
       //     disableOnInteraction: false
       //  }
+    });
+});
+
+// Услуги десктоп
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('service-slider');
+    const slides = Array.from(slider.querySelectorAll('.service-slide'));
+    let currentIndex = 0;
+
+    // Функция показа слайда
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+    }
+
+    // Обработчики кнопок
+    slider.addEventListener('click', function(e) {
+        if (e.target.classList.contains('prev')) {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
+        if (e.target.classList.contains('next')) {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+    });
+
+    // Инициализация
+    showSlide(currentIndex);
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('contact-popup');
+    const closeBtn = document.querySelector('.popup-close');
+    const form = document.getElementById('contact-form');
+
+    // Кнопки, которые открывают попап
+    const triggerButtons = document.querySelectorAll('.btn-primary-guarantee, .btn-primary-footer, .btn-primary');
+
+    // Открываем попап
+    triggerButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault(); // если кнопка — ссылка или submit
+            popup.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // блокируем скролл
+        });
+    });
+
+    // Закрываем попап по крестику
+    closeBtn.addEventListener('click', function() {
+        popup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+
+    // Закрываем попап по клику вне окна
+    popup.addEventListener('click', function(e) {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Обработка формы (можно добавить отправку)
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+        popup.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        form.reset();
     });
 });

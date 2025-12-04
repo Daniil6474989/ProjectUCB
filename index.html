@@ -20,7 +20,6 @@
 <!-- Главный баннер -->
     <header class="hero">
         <img src="/assets/img/block 1.svg" loading="lazy" alt="Экскаватор на стройплощадке">
-
         <div class="hero-overlay">
             <div class="header-top">
                 <div class="contact-logo">
@@ -128,12 +127,37 @@
                 </ul>
             </nav>
         </div>
+                <div class="subtract-main-pic"></div>
+        <div class="subtract-second-pic"></div>
         </div>
         
 
     </header>
 
         
+<!-- Модальное окно -->
+<div id="contact-popup" class="popup">
+    <div class="popup-content">
+        <span class="popup-close">&times;</span>
+        <h3>Оставьте ваши контакты<br>и мы свяжемся с вами</h3>
+        
+        <form id="contact-form">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="tel" placeholder="Номер телефона" required>
+            <button type="submit" class="btn-primary">Заказать звонок <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 12.5L12.5 0.5M12.5 0.5V9.09701M12.5 0.5H3.41429" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></button>
+        </form>
+
+        <div class="popup-footer">
+            <label>
+                <input type="checkbox" class="input-checkbox-popup" required>
+                Я даю согласие на обработку своих персональных данных, согласно политике конфиденциальности
+            </label>
+        </div>
+    </div>
+</div>
+
     <!-- Наш парк спецтехники -->
     <section class="section">
         <div class="container">
@@ -222,30 +246,104 @@
         <div class="container">
             <h2 class="section-title">Услуги \</h2>
             <div class="services-section-content">
-            <div class="service-detail">
-                <div class="service-text">
-                    <h2>Экскаваторы</h2>
-                    <p>Землеройная техника для разработки котлованов, рытья траншей, перемещения грунта и демонтажа зданий. Экскаваторы представлены в гусеничном и колёсном вариантах, что позволяет подобрать модель для любых условий.</p>
-                    <div class="service-nav">
-                        <button>←</button>
-                        <button>→</button>
+            <!-- Контейнер для всех слайдов -->
+            <div class="service-slider" id="service-slider">
+                <!-- Карточка 1 -->
+                <div class="service-slide active">
+                    <div class="service-text">
+                        <h2>Экскаваторы</h2>
+                        <p>Землеройная техника для разработки котлованов, рытья траншей, перемещения грунта и демонтажа зданий. Экскаваторы представлены в гусеничном и колёсном вариантах, что позволяет подобрать модель для любых условий.</p>
+                        
+                        <div class="service-nav">
+                            <button class="nav-btn prev">←</button>
+                            <button class="nav-btn next">→</button>
+                        </div>
+                 
                     </div>
+                    <div class="service-big-blue"></div>
+                    <!-- Изображение внутри карточки -->
+                    <img class="section-detail-img" src="/assets/img/card2.svg" loading="lazy" alt="Экскаваторы">
+                    <div class="service-subtract-second-pic"></div>
                 </div>
-                <div class="service-big-blue"></div>
+
+                <!-- Карточка 2 -->
+                <div class="service-slide">
+                    <div class="service-text">
+                        <h2>Краны</h2>
+                        <p>Грузоподъёмные машины для монтажа конструкций, погрузки и разгрузки тяжёлых грузов. Работаем с автомобильными, башенными и гусеничными кранами любой грузоподъёмности.</p>
+                        <div class="service-nav">
+                            <button class="nav-btn prev">←</button>
+                            <button class="nav-btn next">→</button>
+                        </div>
+                    </div>
+                    <div class="service-big-blue"></div>
+                    <!-- Изображение внутри карточки -->
+                    <img class="section-detail-img" src="/assets/img/card4.svg" loading="lazy" alt="Краны">
+                    <div class="service-subtract-second-pic"></div>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="service-slide">
+                    <div class="service-text">
+                        <h2>Самосвалы</h2>
+                        <p>Техника для перевозки сыпучих материалов: песка, щебня, грунта. В наличии самосвалы различной грузоподъёмности — от 5 до 30 тонн.</p>
+                        <div class="service-nav">
+                            <button class="nav-btn prev">←</button>
+                            <button class="nav-btn next">→</button>
+                        </div>
+                    </div>
+                    <div class="service-big-blue"></div>
+                    <!-- Изображение внутри карточки -->
+                    <img class="section-detail-img" src="/assets/img/card.svg" loading="lazy" alt="Самосвалы">
+                    <div class="service-subtract-second-pic"></div>
+                </div>
+
+                <!-- Карточка 4 -->
+                <div class="service-slide">
+                    <div class="service-text">
+                        <h2>Грейдеры</h2>
+                        <p>Машины для планировки и выравнивания поверхностей. Незаменимы при строительстве дорог, площадок и аэродромов.</p>
+                        <div class="service-nav">
+                            <button class="nav-btn prev">←</button>
+                            <button class="nav-btn next">→</button>
+                        </div>
+                    </div>
+                    <div class="service-big-blue"></div>
+                    <!-- Изображение внутри карточки -->
+                    <img class="section-detail-img" src="/assets/img/card3.svg" loading="lazy" alt="Грейдеры">
+                    <div class="service-subtract-second-pic"></div>
+                </div>
+
+                <!-- Карточка 5 -->
+                <div class="service-slide">
+                    <div class="service-text">
+                        <h2>Бульдозеры</h2>
+                        <p>Тяжёлая техника для земляных работ: срезки грунта, расчистки территорий, уборки снега и перемещения больших объёмов материала.</p>
+                        <div class="service-nav">
+                            <button class="nav-btn prev">←</button>
+                            <button class="nav-btn next">→</button>
+                        </div>
+                    </div>
+                    <div class="service-big-blue"></div>
+                    <!-- Изображение внутри карточки -->
+                    <img class="section-detail-img" src="/assets/img/card6.svg" loading="lazy" alt="Бульдозеры">
+                    <div class="service-subtract-second-pic"></div>
+                </div>
             </div>
-                <img class="section-detail-img" src="/assets/other/content2.svg" loading="lazy" alt="">
-            </div>
-        <div class="guarantee-block">
-            <p class="guarantee-text">
-                Каждая единица оборудования прошла техническое обслуживание и готова к работе. 
-                Мы предоставляем технику с оператором, гарантируем надёжность, оперативную подачу и точное соблюдение сроков.
-            </p>
-            <a href="#" class="btn-primary-guarantee">
-                Заказать звонок <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.5 12.5L12.5 0.5M12.5 0.5V9.09701M12.5 0.5H3.41429" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
+
         </div>
+            <div class="guarantee-block">
+                <p class="guarantee-text">
+                    Каждая единица оборудования прошла техническое обслуживание и готова к работе. 
+                    Мы предоставляем технику с оператором, гарантируем надёжность, оперативную подачу и точное соблюдение сроков.
+                </p>
+                <a href="#" class="btn-primary-guarantee">
+                    Заказать звонок 
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.5 12.5L12.5 0.5M12.5 0.5V9.09701M12.5 0.5H3.41429" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -259,8 +357,11 @@
                 <!-- Слайд 1: Экскаваторы -->
                 <div class="swiper-slide">
                     <div class="services-slide-content">
-                        <img class="section-detail-img" loading="lazy" src="/assets/img/card2.svg" alt="Экскаватор">
-                        <img class="service-big-blue-main-sec1" loading="lazy" src="/assets/other/Rectangle-mob.svg">
+                        <div class="section-img">
+                            <img class="section-detail-img" loading="lazy" src="/assets/img/card2.svg" alt="Экскаватор">
+                            <img class="service-big-blue-main-sec1" loading="lazy" src="/assets/other/Rectangle-mob.svg">
+                            <div class="service-subtract-second-pic"></div>
+                        </div>
                         <div class="service-detail">
                             <div class="service-text">
                                 <h2>Экскаваторы</h2>
@@ -274,8 +375,11 @@
                 <!-- Слайд 2: Краны -->
                 <div class="swiper-slide">
                     <div class="services-slide-content">
-                        <img class="section-detail-img" loading="lazy" src="/assets/img/card4.svg" alt="Кран">
-                        <img class="service-big-blue-main-sec2" loading="lazy" src="/assets/other/Rectangle-mob.svg">
+                        <div class="section-img">
+                            <img class="section-detail-img" loading="lazy" src="/assets/img/card4.svg" alt="Кран">
+                            <img class="service-big-blue-main-sec2" loading="lazy" src="/assets/other/Rectangle-mob.svg">
+                            <div class="service-subtract-second-pic"></div>
+                        </div>
                         <div class="service-detail">
                             <div class="service-text">
                                 <h2>Краны</h2>
@@ -289,8 +393,11 @@
                 <!-- Слайд 3: Самосвалы -->
                 <div class="swiper-slide">
                     <div class="services-slide-content">
-                        <img class="section-detail-img" loading="lazy" src="/assets/img/card.svg" alt="Самосвал">
-                        <img class="service-big-blue-main-sec3" loading="lazy" src="/assets/other/Rectangle-mob.svg">
+                        <div class="section-img">
+                            <img class="section-detail-img" loading="lazy" src="/assets/img/card.svg" alt="Самосвал">
+                            <img class="service-big-blue-main-sec3" loading="lazy" src="/assets/other/Rectangle-mob.svg">
+                            <div class="service-subtract-second-pic"></div>
+                        </div>
                         <div class="service-detail">
                             <div class="service-text">
                                 <h2>Самосвалы</h2>
@@ -301,7 +408,6 @@
                     </div>
                 </div>
 
-                <!-- Добавьте ещё слайдов по необходимости -->
             </div>
             <div class="guarantee-block">
                 <p class="guarantee-text">
@@ -328,6 +434,7 @@
             <div class="about-text">
                 <p>ООО "ИСБ Групп" — компания, которая многие годы, поставляет спецтехнику на строительные объекты Москвы и Московской области. На рынке мы зарекомендовали себя как надежный и проверенный поставщик услуг.</p>
                 <p>Наши главные преимущества — это современная техника, опытные, профессиональные машинисты и водители. Сотрудничество с нами — это доступные цены и индивидуальный подход и решения для каждого клиента. Ваш успех и качество выполненных заказов будут в руках квалифицированных и опытных наших сотрудников, что обеспечит надежную и бесперебойную работу нашей спецтехники на ваших объектах. Благодаря обширной базе поставщиков, поставляем широкий спектр спецтехники быстро и в оговоренные сроки.</p>
+                <p>Ваш успех и качество выполненных заказов будут в руках квалифицированных и опытных наших сотрудников, что обеспечит надежную и бесперебойную работу нашей спецтехники на ваших объектах. Благодаря обширной базе поставщиков, поставляем широкий спектр спецтехники быстро и в оговоренные сроки.</p>
             </div>
             
             <img class="about-text-proccents" loading="lazy" src="/assets/other/procents.svg">

@@ -81,6 +81,14 @@ header {
     text-decoration: underline;
 }
 
+.subtract-main-pic{
+    display: none;
+}
+
+.subtract-second-pic{
+    display: none;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -109,7 +117,6 @@ header {
     color: white;
     padding: 8px 20px;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
     font-weight: 500;
     text-decoration: none;
@@ -335,7 +342,7 @@ header {
     position: absolute;
     right: 0;
     top: 0;
-    width: 30%; /* ширина блока */
+    width: 20%; /* ширина блока */
     height: 39%; /* высота блока */
     background: linear-gradient(135deg, #E6E8F4, #9FAFE5); /* градиент */
     clip-path: polygon(
@@ -361,8 +368,23 @@ header {
 .service-text {
     height: 100%;
     padding: 30px;
-    width: 450px;
+    width: 600px;
 }
+
+
+.service-subtract-second-pic {
+    z-index: 1;
+    opacity: 0.9;
+    right: 47%;
+    bottom: 7%;
+    height: 310px;
+    width: 100px;
+    position: absolute;
+    display: flex;
+    clip-path: polygon(100% 20%, 0% 0%, 0% 100%, 100% 100%, 100% 100%);
+    background: linear-gradient(10deg, rgba(230, 232, 244, 0.3), rgba(0, 0, 191, 0.8));
+}
+
 
 .service-text h2 {
     color: var(--blue-dark);
@@ -372,6 +394,7 @@ header {
 
 .service-text p {
     margin-bottom: 20px;
+    font-size: 25px;
 }
 
 .service-image {
@@ -390,7 +413,22 @@ header {
 .service-nav {
     display: flex;
     gap: 10px;
-    margin-top: 150px;
+    margin-top: 100px;
+}
+
+.service-slider {
+    position: relative;
+}
+
+.service-slide {
+    display: none; /* Скрыть все слайды */
+    background-color: #E6E8F4;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.service-slide.active {
+    display: flex; /* Показать активный слайд */
 }
 
 .service-nav button {
@@ -986,6 +1024,12 @@ footer {
     color: white;
 }
 
+.service-big-blue{
+    width: 10%;
+    left: 470px;
+    top: 0%;
+}
+
 
 /* найстрока процентов без картинки */
 /* @media(max-width:1919px){
@@ -1005,6 +1049,113 @@ footer {
         display: none;
     }
 } */
+
+/* Попап */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.popup-content {
+    background: #E6E8F4;
+    padding: 30px;
+    max-width: 700px;
+    width: 100%;
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.popup-close:hover {
+    color: #2a3b8f;
+}
+
+.popup-content h3 {
+
+font-weight: 600;
+
+font-size: 40px;
+margin-bottom: 40px;
+line-height: 96%;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+
+}
+.input-checkbox-popup{
+    width: 20px;
+}
+.popup-content input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.popup-content input:focus {
+    outline: none;
+    border-color: #2a3b8f;
+    box-shadow: 0 0 0 2px rgba(42, 59, 143, 0.1);
+}
+
+.btn-primary {
+    width: 100%;
+    justify-content: space-between;
+    background: #2a3b8f;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary:hover {
+    background: #1e2c7a;
+}
+
+.popup-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.popup-footer label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.popup-footer input[type="checkbox"] {
+    margin-top: 2px;
+    accent-color: #2a3b8f;
+}
+
+
 
 
 @media(max-width: 1600px){
@@ -1029,10 +1180,15 @@ footer {
         gap:100px;
         grid-template-columns: repeat(2, 400px);
     }
+    
 }
 
 @media(max-width:1200px){
-    
+    .service-big-blue{
+        width: 8%;
+        left: 345px;
+        top: 0%;
+    }
     .subtract-main{
         top: 35vw;
     }
@@ -1045,11 +1201,14 @@ footer {
     .service-text h2{
         font-size: 40px;
     }
-    .service-big-blue{
-        width: 20%;
+    .service-text p{
+        font-size: 22px;
+        width: 340px;
     }
     .service-text{
-        width: 30vw;
+        height: 100%;
+        padding: 30px;
+        width: 430px;
     }
     .swiper-wrapper{
         display: flex;
@@ -1071,19 +1230,40 @@ footer {
         justify-content: center;
         display: flex;
     }
-        .advantages-section{
+    .advantages-section{
         display: block;
     }
+    .about-content{
+        display: grid;
+    }
+    .section-detail-img{
+        height: 500px;
+    }
+    .service-subtract-second-pic {
+        z-index: 1;
+        opacity: 0.9;
+        right: 52%;
+        bottom: 7%;
+        height: 290px;
+        width: 100px;
+        position: absolute;
+        display: flex;
+        clip-path: polygon(100% 20%, 0% 0%, 0% 100%, 100% 100%, 100% 100%);
+        background: linear-gradient(10deg, rgba(230, 232, 244, 0.3), rgba(0, 0, 191, 0.8));
+    }
+    
 }
 
 @media(max-width:1000px){
-
+    .swiper-wrapper{
+        gap: 140px;
+    }
     .subtract-main{
         top: 42vw;
     }
     .service-detail{
-        height: unset;
-        width: 61vw;
+        height: 270px;
+        width: 612px;
         margin-top: -5px;
     }
     .section-detail-img{
@@ -1137,7 +1317,7 @@ footer {
         display: block;
     }
     .section-detail-img{
-        height: 45vw;
+        height: 450px;
     }
     .swiper-slide {
         max-width: 600px;
@@ -1146,6 +1326,7 @@ footer {
         width: 600px;
     }
     .service-big-blue-main-sec1{
+        display: none;
         position: absolute;
         bottom: 44%;
         width: 66%; /* ширина блока */
@@ -1165,6 +1346,7 @@ footer {
         z-index: 2;
     }
         .service-big-blue-main-sec2{
+            display: none;
         position: absolute;
         bottom: 43%;
         width: 66%; /* ширина блока */
@@ -1185,6 +1367,7 @@ footer {
         z-index: 2;
     }
         .service-big-blue-main-sec3{
+            display: none;
         position: absolute;
         bottom: 320px;
         width: 66%; /* ширина блока */
@@ -1206,23 +1389,23 @@ footer {
     }
     .service-big-blue {
         position: absolute;
-        right: 0;
+        left: 305px;
+        right: 28%;
         top: 0;
-        width: 56%;
-        height: 39%;
-        background: linear-gradient(50deg,#9FAFE5,  #E6E8F4);
-        clip-path: polygon(
-            19% 0%,
-            100% 0%, 
-            100% 100%,
-            100% 100%,
-            0% 100%);
+        width: 50%;
+        height: 35%;
+        background: linear-gradient(50deg, #9FAFE5, #E6E8F4);
+        clip-path: polygon(19% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
         opacity: 0.9;
         z-index: 1;
     }
     .about-content{
         display: grid;
         gap: 0;
+    }
+    .service-text p{
+        font-size: 20px;
+        width: 400px;
     }
     /* === Бургер-меню === */
 
@@ -1292,7 +1475,10 @@ footer {
     .mobile-nav.active {
         max-height: 500px; /* можно увеличить при необходимости */
     }
-
+    .popup-content{
+        max-width: 500px;  
+    }
+    
     .mobile-nav ul {
         list-style: none;
         padding: 20px;
@@ -1337,14 +1523,26 @@ footer {
     .hero-content-form{
         top: 500px;
     }
-
+    .service-text {
+        width: 70vw;
+    }
+    .service-subtract-second-pic {
+        z-index: 1;
+        opacity: 0.9;
+        right: 28%;
+        bottom: 42%;
+        height: 80px;
+        width: 435px;
+        position: absolute;
+        display: flex;
+        clip-path: polygon(95% 0%, 0% 0%, 0% 100%, 100% 100%, 85% 100%);
+        background: linear-gradient(110deg, rgba(230, 232, 244, 0.3), rgba(0, 0, 191, 0.8));
+    }
 }
 
 
 @media(max-width:999px){
-    .service-big-blue{
-        display: none;
-    }
+    
     .service-big-blue-main-sec1{
         display: none;
     }
@@ -1357,17 +1555,25 @@ footer {
 }
 
 @media(max-width:768px){
+    .service-text p{
+        font-size: 16px;
+        width: 300px;
+    }
     .equipment-grid{
         justify-content: unset;
     }
     .hero-content-form{
-        right: 0;
+        display: grid;
+        right: 70px;
+        justify-content: start;
+        z-index: 1;
     }
     .service-text{
-        width: 52vw;
+        width: 60vw;
     }
     .service-big-blue{
-        height: 32%;
+        height: 25%;
+        left: 185px;
         display: flex;
         clip-path:polygon(
             20% 0%,
@@ -1377,42 +1583,87 @@ footer {
             5% 100%)
     }
     .service-big-blue-main-sec1{
-        display: flex;
+        display: none;
         bottom: 303px;
         width: 51%;
     }
     .service-big-blue-main-sec2{
-        display: flex;
+        display: none;
         bottom: 43%;
         width: 51%;
     }
     .service-big-blue-main-sec3{
-        display: flex;
+        display: none;
         bottom: 266px;
         width: 51%;
     }
-    .service-text h2{
-        font-size: 28px;
+    .section-detail-img{
+        width: 370px;
+        height: 270px;
     }
+    .service-text h2{
+        font-size: 24px;
+    }
+    
     .header-top{
         display: none;
     }
     .subtract-main{
-        top: 71vw;
+        right: 175px;
+        top: 58vw;
     }
     .subtract-second{
         top: 26vw;
         padding-right: 200px;
     }
+    .service-detail{
+        width: 370px;
+        height: 270px;
+    }
+    .subtract-main-pic{
+        display: flex;
+        clip-path: polygon(
+            85% 0%,
+            0% 0%,
+            0% 100%,
+            100% 100%,
+            100% 100%);
+        background: linear-gradient(         
+        rgba(0, 0, 191, 0.8) );
+        opacity: 0.9;
+        bottom: 0;
+        height: 250px;
+        width: 700px;
+        position: absolute;
+    }
+
+    .subtract-second-pic{
+        opacity: 0.9;
+        bottom: 0;
+        height: 310px;
+        width: 650px;
+        position: absolute;
+        display: flex;
+        clip-path: polygon(
+            80% 0%,
+            0% 0%,
+            0% 100%,
+            100% 100%,
+            100% 100%);
+        background: linear-gradient(rgba(0, 0, 191, 0.8) );
+    }
+
     .subtract-main svg{
+        display: none;
         width: 1100px;
         padding-right: 12vw;
     }
     .subtract-second svg{
+        display: none;
         width: 1100px;
         position: absolute;
         left: 0;
-        padding-right: 0;
+        padding-right: 250px;
     }
     .faq-section-title{
         font-size: 50px;
@@ -1472,7 +1723,7 @@ footer {
         margin-top: 20px;
     }  
     .stick-footer{
-        margin-left: 30vw;
+        margin-left: 20vw;
     }
     .about-text{
         width: 70vw;
@@ -1482,6 +1733,8 @@ footer {
     }
     .hero-form{
         display: grid;
+        left: 80px;
+        position: relative;
     }
     .hero-form input{
         padding: 10px;
@@ -1514,11 +1767,86 @@ footer {
     #swip-centr{
         justify-content: center;
         width: 1440px;
+        gap: 150px;
+    }
+    .service-subtract-second-pic {
+        z-index: 1;
+        opacity: 0.9;
+        bottom: 55%;
+        right: 12%;
+        height: 80px;
+        width: 265px;
+        position: absolute;
+        display: flex;
+        clip-path: polygon(95% 0%, 0% 0%, 0% 100%, 100% 100%, 85% 100%);
+        background: linear-gradient(110deg, rgba(230, 232, 244, 0.3), rgba(0, 0, 191, 0.8));
     }
 }
 
 @media(max-width:480px){
-    
+    .hero-form input{
+        width: 320px;
+    }
+    .hero-content h1{
+        font-size: 24px;
+    }
+    .subtract-main-pic{
+        width: 480px;
+    }
+    .subtract-second-pic{
+        width: 440px;
+    }
+    .equipment-card-img{
+        width: 410px;
+    }
+    .test{
+        width: 440px;
+    }
+    .about-text{
+        width: 80vw;
+    }
+    .advantage-card{
+        width: 350px;
+    }
+    .about-text{
+        font-size: 20px;
+    }
+    .stick-footer{
+        margin-left: 5vw;
+    }
+    .service-detail{
+        height: 300px;
+    }
+    #swip-centr{
+        gap: 120px;
+        justify-content: unset;
+    }
+    .about-text-proccents{
+        width: 400px;
+    }
+    .service-subtract-second-pic {
+        z-index: 1;
+        opacity: 0.9;
+        bottom: 57%;
+        height: 80px;
+        width: 265px;
+        position: absolute;
+        display: flex;
+        clip-path: polygon(95% 0%, 0% 0%, 0% 100%, 100% 100%, 85% 100%);
+        background: linear-gradient(110deg, rgba(230, 232, 244, 0.3), rgba(0, 0, 191, 0.8));
+    }
+
 }
 
+@media(max-width:376px){
+    .advantage-card-item{
+        left: 33%;
+    }
+    .service-detail{
+        height: 340px;
+    }
+    .service-subtract-second-pic{
+        bottom: 60%;
+    }
+}
 
