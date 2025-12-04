@@ -1828,7 +1828,7 @@ vertical-align: middle;
         justify-content: unset;
     }
     .about-text-proccents{
-        width: 400px;
+        width: 360px;
     }
     .service-subtract-second-pic {
         z-index: 1;
@@ -1841,10 +1841,16 @@ vertical-align: middle;
         clip-path: polygon(95% 0%, 0% 0%, 0% 100%, 100% 100%, 85% 100%);
         background: linear-gradient(110deg, rgba(230, 232, 244, 0.3), rgba(0, 0, 191, 0.8));
     }
+    .section-title-about{
+        font-size: 40px;
+    }
 
 }
 
 @media(max-width:376px){
+    .about-text-proccents{
+        width: 310px;
+    }
     .section-detail-img{
         width: 330px;
     }
