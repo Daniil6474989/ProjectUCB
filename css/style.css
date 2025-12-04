@@ -1765,9 +1765,8 @@ vertical-align: middle;
         padding: 0;
     }
     #swip-centr{
-        justify-content: center;
         width: 1440px;
-        gap: 150px;
+        gap: 60px;
     }
     .service-subtract-second-pic {
         z-index: 1;
@@ -1782,10 +1781,10 @@ vertical-align: middle;
         background: linear-gradient(110deg, rgba(230, 232, 244, 0.3), rgba(0, 0, 191, 0.8));
     }
     .equipment-card-img{
-        width: 460px;
+        width: 430px;
     }
     .test{
-        width: 500px;
+        width: 470px;
     }
 }
 
