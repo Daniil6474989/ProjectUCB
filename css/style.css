@@ -1,3 +1,16 @@
+/*
+Theme Name: ProjectUCB
+Theme URI: https://example.com/projectucb
+Author: Your Name
+Author URI: https://example.com
+Description: Описание вашей темы.
+Version: 1.0.0
+License: GNU General Public License v2 или позже
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: projectucb
+Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+*/
+
 :root {
     --primary: #2C3E50;
     --secondary: #3498DB;
@@ -1923,4 +1936,5 @@ vertical-align: middle;
     }
 
 }
+
 
